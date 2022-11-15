@@ -39,6 +39,10 @@ button{
     font-size: medium;
 }
 
+.bier ul{
+    list-style: none;
+}
+
 .visible{
     display: inline;
 }
