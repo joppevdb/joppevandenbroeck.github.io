@@ -11,45 +11,22 @@
 <body>
 <main class="container">
     <div x-data="{
-    responsedata: null,
-    postnaam: null,
-    postvolume: null,
-    postalcohol: null,
-    postbrouwerij: null,
+    bieren: null,
     async callmethod1(){
-        this.responsedata = await (await fetch('https://bier-service-joppevdb.cloud.okteto.net/bier',
+        this.bieren = await (await fetch('https://bier-service-joppevdb.cloud.okteto.net/bier',
         {
-            method: 'GET',
-<!--            body: JSON.stringify({-->
-<!--                naam: this.postnaam,-->
-<!--                volume: this.postvolume,-->
-<!--                alcohol_perc: this.postalcohol,-->
-<!--                brouwerij: this.postbrouwerij,-->
-<!--            }),-->
+            method: 'GET'
 
         })).json();
-        console.log(this.responsedata);
+        console.log(this.bieren);
     }
     }">
-        <div>
-<!--            <div class="col-md-4 ">-->
-<!--                <h3>Naam:</h3>-->
-<!--                <input type="text" x-model="postnaam">-->
-<!--            </div>-->
-<!--            <div>-->
-<!--                <h3>Volume in cl:</h3>-->
-<!--                <input type="number" x-model="postvolume">-->
-<!--            </div>-->
-<!--            <div>-->
-<!--                <h3>alcohol percenatage:</h3>-->
-<!--                <input type="number" x-model="postalcohol">-->
-<!--            </div>-->
-<!--            <div>-->
-<!--                <h3>brouwerij:</h3>-->
-<!--                <input type="text" x-model="postbrouwerij">-->
-<!--            </div>-->
-            <button x-on:click="callmethod1">insert</button>
-        </div>
+
+        <template x-for="bier in bieren">
+            <li x-text="bier.naam"></li>
+        </template>
+        <button x-on:click="callmethod1">insert</button>
+
 
     </div>
 </main>
