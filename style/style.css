@@ -1,19 +1,30 @@
 html, body {
     margin: 0;
     height: 100%;
+
 }
 .container{
     background-color: #f5d033;
-    height: 100%    ;
-}
+    height: 100%;
+    padding: 0px;
 
+
+}
+.title-balk{
+    background-color: black;
+    color: #f5d033;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
 button{
     color: #f5d033;
     background-color: black;
     border-radius: 8px;
     padding: 10px;
     margin-bottom: 20px;
+    margin-left: 20px;
 }
+
 
 .bier{
     border-color: black;
@@ -24,4 +35,12 @@ button{
 
 .bier h3{
     font-size: medium;
+}
+
+.visible{
+    display: inline;
+}
+
+.invisible{
+    display: none;
 }
