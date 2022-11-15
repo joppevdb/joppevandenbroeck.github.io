@@ -32,11 +32,10 @@ button{
     padding: 10px;
     width: 100%;
     margin-bottom: 15px;
+    margin-left: 15px;
 }
 
-#overzichtSoort{
-    margin: 5px;
-}
+
 
 .bier h3{
     font-size: medium;
