@@ -30,11 +30,11 @@
     }">
         <div>
             <button x-on:click="callmethod1">Toon alle bieren</button>
-            <div>
+            <div class="m-2 row">
                 <template class="mx-auto" x-for="bier in bieren">
-                    <div class="bier">
+                    <div class="bier col-4">
                         <h3 x-text="bier.naam"></h3>
-                        <li x-text="bier.alcohol_prec">%</li>
+                        <li x-text="bier.alcohol_perc">%</li>
                         <li x-text="bier.brouwerij"></li>
                     </div>
                 </template>
