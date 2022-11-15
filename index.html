@@ -3,8 +3,32 @@
     <script defer src="https://unpkg.com/alpinejs@3.5.0/dist/cdn.min.js"></script>
 </head>
 <body>
-    <div x-data="{fetch('https://bier-service-joppevdb.cloud.okteto.net/bier'}">
-        Data returned: <strong x-text="responsedata[0]">Placeholder</strong>
+<div x-data="{
+    responsedata: null,
+    postnaam: null,
+    postvolume: null,
+    postalcohol: null,
+    postbrouwerij: null,
+    async callmethod1(){
+        this.responsedata = await (await fetch('https://bier-service-joppevdb.cloud.okteto.net/bier/',
+        {
+            method: 'POST',
+            body: JSON.stringify({
+                naam: this.postnaam,
+                volume: this.postvolume,
+                alcohol_perc: this.postalcohol,
+                brouwerij: this.postbrouwerij,
+            }),
+
+        })).json();
+        console.log(this.responsedata);
+    }
+    }">
+        <input type="text" x-model="postnaam">
+        <input type="number" x-model="postvolume">
+        <input type="number" x-model="postalcohol">
+        <input type="text" x-model="postbrouwerij">
+        <button x-on:click="callmethod1">insert</button>
     </div>
 </body>
 </html>
