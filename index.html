@@ -78,9 +78,9 @@
 
         <!--overzicht per brouwerij-->
         <div id="overzichtBrouwerij" class="row invisible">
-            <div>
-                <input class="col-12" type="text" x-model="inputBrouwerij">
-                <button x-on:click="callmethod2">Zoek</button>
+            <div class="text-center">
+                <input class="col-6" type="text" x-model="inputBrouwerij">
+                <button class="col-6" x-on:click="callmethod2">Zoek</button>
                 <template x-for="bier in bieren">
                     <p x-text="bier.naam"></p>
                 </template>
