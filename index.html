@@ -20,23 +20,23 @@
 
     <div x-data="{
     bieren: null,
+    soorten: null,
     async callmethod1(){
         this.bieren = await (await fetch('https://bier-service-joppevdb.cloud.okteto.net/bier',
         {
             method: 'GET'
-
         })).json();
         console.log(this.bieren);
-    }
+    },
     async callmethod2(){
-        this.bieren = await (await fetch('https://bier-service-joppevdb.cloud.okteto.net/soort',
+        this.soorten = await (await fetch('https://bier-service-joppevdb.cloud.okteto.net/soort',
         {
             method: 'GET'
-
         })).json();
-        console.log(this.bieren);
+        console.log(this.soorten);
     }
     }">
+
 
         <div class="row">
             <div class="col-4 text-center">
@@ -46,16 +46,30 @@
                 <button x-on:click="callmethod1">Toon per brouwerij</button>
             </div>
             <div class="col-4 text-center">
-                <button x-on:click="callmethod2">Toon per soort</button>
+                <button id="soort" x-on:click="callmethod2">Toon per soort</button>
             </div>
         </div>
 
-        <div id="overzicht" class="row invisible">
+        <!--        overzichet van alle bieren-->
+        <div id="overzichtAlle" class="row invisible">
             <template x-for="bier in bieren">
-                <div class="bier col-4 p-2 m-2">
+                <div class="bier col-3 p-2 m-2">
                     <h3 x-text="bier.naam"></h3>
                     <p>Alcohol percentage: <strong x-text="bier.alcohol_perc"></strong>%</p>
                     <p>Gebrouwen door:<strong x-text="bier.brouwerij"></strong></p>
+                </div>
+            </template>
+        </div>
+
+        <!--        overzicht per soort-->
+        <div id="overzichtSoort" class="row invisible">
+            <template x-for="i in soorten">
+                <div class="bier m-5">
+                    <h2 class="text-center" x-text="i.soort"></h2>
+                    <template x-for="bier in i.bieren">
+                        <li x-text="bier.naam"></li>
+                        <li x-text="bier.alcohol_perc"></li>
+                    </template>
                 </div>
             </template>
         </div>
