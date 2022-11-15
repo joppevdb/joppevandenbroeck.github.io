@@ -66,10 +66,12 @@
 <!--        overzicht per soort-->
         <div id="overzichtSoort" class="row invisible">
             <template x-for="i in soorten">
-                <h3 x-text="i.soort"></h3>
-                <template x-for="bier in i.bieren">
-                    <p x-text="bier"></p>
-                </template>
+                <div>
+                    <h3 x-text="i.soort"></h3>
+                    <template x-for="bier in i.bieren">
+                        <p x-text="bier.naam"></p>
+                    </template>
+                </div>
             </template>
         </div>
 
