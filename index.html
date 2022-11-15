@@ -21,6 +21,7 @@
     <div x-data="{
     bieren: null,
     soorten: null,
+    bierenVanBrouwerij: null,
     inputBrouwerij: null,
     async callmethod1(){
         this.bieren = await (await fetch('https://bier-service-joppevdb.cloud.okteto.net/bier',
@@ -30,11 +31,11 @@
         console.log(this.bieren);
     },
        async callmethod2(){
-        this.bieren = await (await fetch('https://bier-service-joppevdb.cloud.okteto.net/brouwerij/inputBrouwerij',
+        this.bierenVanBrouwerij = await (await fetch('https://bier-service-joppevdb.cloud.okteto.net/brouwerij/inputBrouwerij',
         {
             method: 'GET'
         })).json();
-        console.log(this.bieren);
+        console.log(this.bierenVanBrouwerij);
     },
     async callmethod3(){
         this.soorten = await (await fetch('https://bier-service-joppevdb.cloud.okteto.net/soort',
