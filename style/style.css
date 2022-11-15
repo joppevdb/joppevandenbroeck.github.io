@@ -34,7 +34,9 @@ button{
     margin-bottom: 15px;
 }
 
-
+#overzichtSoort{
+    margin: 5px;
+}
 
 .bier h3{
     font-size: medium;
