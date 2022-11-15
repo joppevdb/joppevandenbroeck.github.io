@@ -31,9 +31,16 @@
         console.log(this.bieren);
     },
        async callmethod2(){
-        this.bierenVanBrouwerij = await (await fetch('https://bier-service-joppevdb.cloud.okteto.net/brouwerij/inputBrouwerij',
+        this.bierenVanBrouwerij = await (await fetch('https://bier-service-joppevdb.cloud.okteto.net/brouwerij',
         {
             method: 'GET'
+            body: JSON.stringify({
+                brouwerij: this.inputBrouwerij
+
+              }),
+              headers: {
+                'Content-type': 'application/json; charset=UTF-8',
+              },
         })).json();
         console.log(this.bierenVanBrouwerij);
     },
