@@ -6,7 +6,8 @@
     <div x-data="{
         responsedata: null,
         async getData() {
-            this.responsedata = await (await fetch('https://bier-service-joppevdb.cloud.okteto.net/bier')).json();
+            this.responsedata = fetch('https://bier-service-joppevdb.cloud.okteto.net')
+
         }
     }">
         Data returned: <strong x-text="responsedata[0]">Placeholder</strong>
