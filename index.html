@@ -9,7 +9,11 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="style/style.css">
 
+    <script>
+        function perBrouwerij(){
 
+        }
+    </script>
 </head>
 <body>
 <main class="container">
@@ -33,10 +37,9 @@
        async callmethod2(){
         this.bierenVanBrouwerij = await (await fetch('https://bier-service-joppevdb.cloud.okteto.net/brouwerij',
         {
-            method: 'GET',
+            method: 'POST',
             body: JSON.stringify({
                 brouwerij: this.inputBrouwerij
-
               }),
               headers: {
                 'Content-type': 'application/json; charset=UTF-8',
