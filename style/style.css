@@ -1,5 +1,10 @@
+html, body {
+    margin: 0;
+    height: 100%;
+}
 .container{
     background-color: #f5d033;
+    height: 100%    ;
 }
 
 button{
@@ -15,4 +20,8 @@ button{
     border-radius: 4px;
     background-color: white;
     color: black;
+}
+
+.bier h3{
+    font-size: medium;
 }
