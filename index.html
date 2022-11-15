@@ -74,8 +74,8 @@
                 <div class="soort">
                     <h2 class="text-center" x-text="i.soort"></h2>
                     <template x-for="bier in i.bieren">
+                        <h4 x-text="bier.naam"></h4>
                         <ul>
-                            <li x-text="bier.naam"></li>
                             <li x-text="bier.alcohol_perc"></li>
                         </ul>
                     </template>

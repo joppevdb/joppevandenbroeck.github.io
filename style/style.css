@@ -54,6 +54,9 @@ button{
     padding: 10px;
 }
 
+.soort ul{
+    list-style-type: none;
+}
 .visible{
     display: inline;
 }
