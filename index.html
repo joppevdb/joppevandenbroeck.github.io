@@ -9,8 +9,7 @@
             this.responsedata = await (await fetch('https://bier-service-joppevdb.cloud.okteto.net/bier')).json();
         }
     }">
-        <button x-on:click="getData">Send get request</button>
-        Data returned: <strong x-text="responsedata[0].naam">Placeholder</strong>
+        Data returned: <strong x-text="responsedata[0]">Placeholder</strong>
     </div>
 </body>
 </html>
