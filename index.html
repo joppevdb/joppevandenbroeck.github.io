@@ -68,9 +68,7 @@
             <template x-for="i in soorten">
                 <div>
                     <h3 x-text="i.soort"></h3>
-                    <template x-for="bier in i.bieren">
-                        <p x-text="bier.naam"></p>
-                    </template>
+                    <p x-text="i.bieren"></p>
                 </div>
             </template>
         </div>
