@@ -33,7 +33,7 @@
        async callmethod2(){
         this.bierenVanBrouwerij = await (await fetch('https://bier-service-joppevdb.cloud.okteto.net/brouwerij',
         {
-            method: 'GET'
+            method: 'GET',
             body: JSON.stringify({
                 brouwerij: this.inputBrouwerij
 
