@@ -31,13 +31,7 @@
        async callmethod2(){
         this.bierenVanBrouwerij = await (await fetch('https://bier-service-joppevdb.cloud.okteto.net/brouwerij/Westmalle'
         {
-            method: 'GETS',
-            body: JSON.stringify({
-                brouwerij: this.inputBrouwerij
-             }),
-              headers: {
-                'Content-type': 'application/json; charset=UTF-8',
-              },
+            method: 'GET'
         })).json();
         console.log(this.bierenVanBrouwerij);
     },
