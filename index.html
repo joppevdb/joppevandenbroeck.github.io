@@ -52,14 +52,16 @@
 
         <!--        overzichet van alle bieren-->
         <div id="overzichtAlle" class="invisible">
-            <div class="row text-center">
+            <div class="row">
                 <template x-for="bier in bieren">
-                    <div class="col-6 bier">
-                        <h3 x-text="bier.naam"></h3>
-                        <ul>
-                            <li>Alcohol percentage: <strong x-text="bier.alcohol_perc"></strong>%</li>
-                            <li>Gebrouwen door:<strong x-text="bier.brouwerij"></strong></li>
-                        </ul>
+                    <div class="col-6">
+                        <div class="bier">
+                            <h3 x-text="bier.naam"></h3>
+                            <ul>
+                                <li>Alcohol percentage: <strong x-text="bier.alcohol_perc"></strong>%</li>
+                                <li>Gebrouwen door:<strong x-text="bier.brouwerij"></strong></li>
+                            </ul>
+                        </div>
                     </div>
                 </template>
             </div>
