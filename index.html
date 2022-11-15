@@ -21,6 +21,7 @@
     <div x-data="{
     bieren: null,
     soorten: null,
+    inputBrouwerij: null,
     async callmethod1(){
         this.bieren = await (await fetch('https://bier-service-joppevdb.cloud.okteto.net/bier',
         {
@@ -28,7 +29,14 @@
         })).json();
         console.log(this.bieren);
     },
-    async callmethod2(){
+       async callmethod2(){
+        this.bieren = await (await fetch('https://bier-service-joppevdb.cloud.okteto.net/brouwerij/inputBrouwerij',
+        {
+            method: 'GET'
+        })).json();
+        console.log(this.bieren);
+    },
+    async callmethod3(){
         this.soorten = await (await fetch('https://bier-service-joppevdb.cloud.okteto.net/soort',
         {
             method: 'GET'
@@ -46,11 +54,11 @@
                 <button x-on:click="callmethod1">Toon per brouwerij</button>
             </div>
             <div class="col-4 text-center">
-                <button id="soort" x-on:click="callmethod2">Toon per soort</button>
+                <button id="soort" x-on:click="callmethod3">Toon per soort</button>
             </div>
         </div>
 
-        <!--        overzichet van alle bieren-->
+        <!--overzicht van alle bieren-->
         <div id="overzichtAlle" class="invisible">
             <div class="row">
                 <template x-for="bier in bieren">
@@ -68,7 +76,15 @@
 
         </div>
 
-        <!--        overzicht per soort-->
+        <!--overzicht per brouwerij-->
+        <div id="overzichtBrouwerij" class="row invisible">
+            <input type="text" x-model="inputBrouwerij">
+            <template x-for="bier in bieren">
+                <p x-text="bier.naam"></p>
+            </template>
+        </div>
+
+        <!--overzicht per soort-->
         <div id="overzichtSoort" class="row invisible">
             <template x-for="i in soorten">
                 <div class="soort">
