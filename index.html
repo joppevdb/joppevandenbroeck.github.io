@@ -28,6 +28,14 @@
         })).json();
         console.log(this.bieren);
     }
+    async callmethod2(){
+        this.bieren = await (await fetch('https://bier-service-joppevdb.cloud.okteto.net/soort',
+        {
+            method: 'GET'
+
+        })).json();
+        console.log(this.bieren);
+    }
     }">
 
         <div class="row">
@@ -38,7 +46,7 @@
                 <button x-on:click="callmethod1">Toon per brouwerij</button>
             </div>
             <div class="col-4 text-center">
-                <button x-on:click="callmethod1">Toon per soort</button>
+                <button x-on:click="callmethod2">Toon per soort</button>
             </div>
         </div>
 
@@ -55,6 +63,6 @@
 
     </div>
 </main>
-    <script src="js/index.js"></script>
+<script src="js/index.js"></script>
 </body>
 </html>
