@@ -54,13 +54,6 @@
 
 <!--        overzichet van alle bieren-->
         <div id="overzichtAlle" class="row invisible">
-            <template x-for="soort in soorten">
-                <h3 x-text="soort"></h3>
-            </template>
-        </div>
-
-<!--        overzicht per soort-->
-        <div id="overzichtSoort" class="row invisible">
             <template x-for="bier in bieren">
                 <div class="bier col-4 p-2 m-2">
                     <h3 x-text="bier.naam"></h3>
@@ -70,11 +63,19 @@
             </template>
         </div>
 
+<!--        overzicht per soort-->
+        <div id="overzichtSoort" class="row invisible">
+            <template x-for="soort in soorten">
+                <h3 x-text="soort"></h3>
+            </template>
+        </div>
+
 
     </div>
 </main>
 <script src="js/index.js"></script>
 </body>
 </html>
+
 
 
