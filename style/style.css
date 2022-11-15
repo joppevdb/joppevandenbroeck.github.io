@@ -6,8 +6,7 @@ html, body {
 .container{
     background-color: #f5d033;
     height: 100%;
-    padding-left: 5px;
-    padding-right: 5px;
+    padding: 0px;
 }
 .title-balk{
     background-color: black;
@@ -30,7 +29,8 @@ button{
     border-radius: 4px;
     background-color: white;
     color: black;
-    padding: 0px;
+    padding: 5px;
+    margin: 5px;
 }
 
 
