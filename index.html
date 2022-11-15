@@ -51,10 +51,10 @@
                 <button id="alle" x-on:click="callmethod1">Toon alle bieren</button>
             </div>
             <div class="col-4 text-center">
-                <button id="brouwerij" x-on:click="callmethod2">Toon per brouwerij</button>
+                <button id="brouwerij">Toon per brouwerij</button>
             </div>
             <div class="col-4 text-center">
-                <button id="soort">Toon per soort</button>
+                <button id="soort" x-on:click="callmethod3">Toon per soort</button>
             </div>
         </div>
 
@@ -80,7 +80,7 @@
         <div id="overzichtBrouwerij" class="row invisible">
             <div>
                 <input class="col-12" type="text" x-model="inputBrouwerij">
-                <button x-on:click="callmethod3">Zoek</button>
+                <button x-on:click="callmethod2">Zoek</button>
                 <template x-for="bier in bieren">
                     <p x-text="bier.naam"></p>
                 </template>
