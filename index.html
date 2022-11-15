@@ -31,7 +31,7 @@
         console.log(this.bieren);
     },
        async callmethod2(){
-        this.bierenVanBrouwerij = await (await fetch('https://bier-service-joppevdb.cloud.okteto.net/brouwerij/inputBrouwerij',
+        this.bierenVanBrouwerij = await (await fetch('https://bier-service-joppevdb.cloud.okteto.net/bier',
         {
             method: 'GET'
         })).json();
@@ -83,7 +83,10 @@
                 <input class="col-6" type="text" x-model="inputBrouwerij">
                 <button class="col-6" x-on:click="callmethod2">Zoek</button>
                 <template x-for="bier in bierenVanBrouwerij">
-                    <p x-text="bier.naam"></p>
+                    <template x-if="bier.brouwerij = inputBrouwerij">
+                        <p x-text="bier.naam"></p>
+                    </template>
+
                 </template>
             </div>
 
