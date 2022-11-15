@@ -28,7 +28,7 @@ btnSoort.addEventListener('click', function (e){
 
 })
 
-btnSoort.addEventListener('click', function (e){
+btnBrouwerij.addEventListener('click', function (e){
     overzichtAlle.classList.add("invisible")
     overzichtSoort.classList.add("invisible")
     overzichtBrouwerij.classList.add("visible")
