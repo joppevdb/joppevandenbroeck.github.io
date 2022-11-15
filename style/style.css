@@ -6,9 +6,7 @@ html, body {
 .container{
     background-color: #f5d033;
     height: 100%;
-    padding: 0px;
-
-
+    width: 100%;
 }
 .title-balk{
     background-color: black;
