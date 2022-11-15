@@ -36,8 +36,6 @@ button{
     margin-right: 15px;
 }
 
-
-
 .bier h3{
     font-size: medium;
 }
@@ -45,6 +43,13 @@ button{
 .bier ul{
     padding: 0px;
     list-style-type: none;
+}
+
+.soort{
+    border-color: black;
+    border-radius: 4px;
+    background-color: white;
+    color: black;
 }
 
 .visible{
