@@ -58,6 +58,10 @@ button{
     list-style-type: none;
     padding: 0px;
 }
+
+.soort h5{
+    margin: 0px;
+}
 .visible{
     display: inline;
 }
