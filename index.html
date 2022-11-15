@@ -27,7 +27,7 @@
 
         })).json();
         console.log(this.bieren);
-    }
+    },
     async callmethod2(){
         this.bieren = await (await fetch('https://bier-service-joppevdb.cloud.okteto.net/soort',
         {
