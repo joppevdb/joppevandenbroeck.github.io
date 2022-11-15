@@ -7,10 +7,12 @@ button{
     background-color: black;
     border-radius: 8px;
     padding: 10px;
+    margin-bottom: 20px;
 }
 
 .bier{
     border-color: black;
     border-radius: 4px;
     background-color: white;
+    color: black;
 }
