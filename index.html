@@ -3,13 +3,7 @@
     <script defer src="https://unpkg.com/alpinejs@3.5.0/dist/cdn.min.js"></script>
 </head>
 <body>
-    <div x-data="{
-        responsedata: null,
-        async getData() {
-            this.responsedata = fetch('https://bier-service-joppevdb.cloud.okteto.net/bier')
-
-        }
-    }">
+    <div x-data="{fetch('https://bier-service-joppevdb.cloud.okteto.net/bier'}">
         Data returned: <strong x-text="responsedata[0]">Placeholder</strong>
     </div>
 </body>
