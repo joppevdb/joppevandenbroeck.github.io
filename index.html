@@ -66,7 +66,10 @@
 <!--        overzicht per soort-->
         <div id="overzichtSoort" class="row invisible">
             <template x-for="soort in soorten">
-                <h3 x-text="soort"></h3>
+                <h3 x-text="soort[0]"></h3>
+                <template x-for="bier in soort[1]">
+                    <p x-text="bier"></p>
+                </template>
             </template>
         </div>
 
@@ -76,6 +79,7 @@
 <script src="js/index.js"></script>
 </body>
 </html>
+
 
 
 
