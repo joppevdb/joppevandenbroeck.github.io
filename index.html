@@ -19,6 +19,13 @@
     </div>
 
     <div x-data="{
+    postnaam: null,
+    postvolume: null,
+    postalcohol_per: null,
+    postbrouwerij: null,
+    postsoort: null,
+    postland: null,
+    responsedata: null,
     bieren: null,
     soorten: null,
     bierenVanBrouwerij: null,
@@ -43,6 +50,13 @@
             method: 'GET'
         })).json();
         console.log(this.soorten);
+    },
+    async callmethod4(){
+        this.reponsedata = await (await fetch('https://bier-service-joppevdb.cloud.okteto.net/bier/',
+        {
+            method: 'POST',
+
+        }
     }
     }">
 
@@ -111,27 +125,30 @@
             <div class="col-8 mx-auto" id="input">
                 <div class="form-group">
                     <label for="naam">Naam:</label>
-                    <input id="naam" class="form-control" type="text">
+                    <input id="naam" class="form-control" type="text" x-model="postnaam">
                 </div>
                 <div class="form-group">
                     <label for="Volume">Volume:</label>
-                    <input id="Volume" class="form-control" type="text">
+                    <input id="Volume" class="form-control" type="number" x-model="postvolume">
                 </div>
                 <div class="form-group">
                     <label for="AlcoholPercentage">Alcohol percentage:</label>
-                    <input id="AlcoholPercentage" class="form-control" type="text">
+                    <input id="AlcoholPercentage" class="form-control" type="number" x-model="postalcohol_perc">
                 </div>
                 <div class="form-group">
                     <label for="brouwerijIn">brouwerij:</label>
-                    <input id="brouwerijIn" class="form-control" type="text">
+                    <input id="brouwerijIn" class="form-control" type="text" x-model="postbrouwerij">
                 </div>
                 <div class="form-group">
                     <label for="SoortIn">Soort:</label>
-                    <input id="SoortIn" class="form-control" type="text">
+                    <input id="SoortIn" class="form-control" type="text" x-model="postsoort">
                 </div>
                 <div class="form-group">
                     <label for="Land">Land:</label>
-                    <input id="Land" class="form-control" type="text">
+                    <input id="Land" class="form-control" type="text" x-model="postland">
+                </div>
+                <div>
+                    <button  x-on:click="callmethod4">Verstuur</button>
                 </div>
             </div>
         </div>
