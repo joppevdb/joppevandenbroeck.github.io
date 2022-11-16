@@ -83,7 +83,7 @@
                 <input class="col-6" type="text" x-model="inputBrouwerij">
                 <button class="col-6" x-on:click="callmethod2">Zoek</button>
                 <template x-for="bier in bierenVanBrouwerij">
-                    <p class="bier" x-text="bier"></p>
+                    <li class="brouwerij col-6" x-text="bier"></li>
                 </template>
             </div>
 
