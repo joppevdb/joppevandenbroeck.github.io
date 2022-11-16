@@ -48,7 +48,5 @@ btnZoeken.addEventListener('click', function (e){
 
 btnVerstuur.addEventListener('click', function (e){
     document.getElementById("myfrom").reset();
-    document.getElementById("message").classList.add("visible")
-    document.getElementById("message").classList.remove("invisible")
 })
 
