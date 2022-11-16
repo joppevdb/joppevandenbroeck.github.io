@@ -2,6 +2,7 @@ const btnAlle = document.getElementById("alle")
 const btnSoort = document.getElementById("soort")
 const btnBrouwerij = document.getElementById("brouwerij")
 const btnZoeken = document.getElementById("zoeken")
+const btnVerstuur = document.getElementById("verstuur")
 
 const overzichtAlle = document.getElementById("overzichtAlle")
 const overzichtSoort = document.getElementById("overzichtSoort")
@@ -43,11 +44,13 @@ btnBrouwerij.addEventListener('click', function (e){
 btnZoeken.addEventListener('click', function (e){
     overzichtBrouwerij.classList.add("visible")
     overzichtBrouwerij.classList.remove("invisible")
+})
 
+btnVerstuur.addEventListener('click', function (e){
     const inputs = document.querySelector("#naam, #volume, #alcoholPercentage, #brouwerijIn, #soortIn, #land");
 
     inputs.forEach(input =>{
-        input.value = "";
+        input.value = '';
     });
 })
 
