@@ -47,11 +47,6 @@ btnZoeken.addEventListener('click', function (e){
 })
 
 btnVerstuur.addEventListener('click', function (e){
-    const inputs = document.querySelector("#naam, #volume, #alcoholPercentage, #brouwerijIn, #soortIn, #land");
-
-    Array.from(inputs).forEach(input =>{
-        input.value = "";
-        console.log(input)
-    });
+    document.getElementById("myfrom").reset();
 })
 

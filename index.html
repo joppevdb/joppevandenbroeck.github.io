@@ -136,33 +136,35 @@
         </div>
         <div class="row">
             <div class="col-8 mx-auto" id="input">
-                <div class="form-group">
-                    <label for="naam">Naam:</label>
-                    <input id="naam" class="form-control" type="text" x-model="postnaam">
-                </div>
-                <div class="form-group">
-                    <label for="volume">Volume:</label>
-                    <input id="volume" class="form-control" type="number" x-model="postvolume">
-                </div>
-                <div class="form-group">
-                    <label for="alcoholPercentage">Alcohol percentage:</label>
-                    <input id="alcoholPercentage" class="form-control" type="number" x-model="postalcohol_perc">
-                </div>
-                <div class="form-group">
-                    <label for="brouwerijIn">brouwerij:</label>
-                    <input id="brouwerijIn" class="form-control" type="text" x-model="postbrouwerij">
-                </div>
-                <div class="form-group">
-                    <label for="soortIn">Soort:</label>
-                    <input id="soortIn" class="form-control" type="text" x-model="postsoort">
-                </div>
-                <div class="form-group">
-                    <label for="land">Land:</label>
-                    <input id="land" class="form-control" type="text" x-model="postland">
-                </div>
-                <div>
-                    <button id="verstuur" x-on:click="callmethod4">Verstuur</button>
-                </div>
+                <form id="myfrom">
+                    <div class="form-group">
+                        <label for="naam">Naam:</label>
+                        <input id="naam" class="form-control" type="text" x-model="postnaam">
+                    </div>
+                    <div class="form-group">
+                        <label for="volume">Volume:</label>
+                        <input id="volume" class="form-control" type="number" x-model="postvolume">
+                    </div>
+                    <div class="form-group">
+                        <label for="alcoholPercentage">Alcohol percentage:</label>
+                        <input id="alcoholPercentage" class="form-control" type="number" x-model="postalcohol_perc">
+                    </div>
+                    <div class="form-group">
+                        <label for="brouwerijIn">brouwerij:</label>
+                        <input id="brouwerijIn" class="form-control" type="text" x-model="postbrouwerij">
+                    </div>
+                    <div class="form-group">
+                        <label for="soortIn">Soort:</label>
+                        <input id="soortIn" class="form-control" type="text" x-model="postsoort">
+                    </div>
+                    <div class="form-group">
+                        <label for="land">Land:</label>
+                        <input id="land" class="form-control" type="text" x-model="postland">
+                    </div>
+                    <div>
+                        <button id="verstuur" x-on:click="callmethod4">Verstuur</button>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
