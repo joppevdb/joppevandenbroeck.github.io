@@ -5,7 +5,6 @@ html, body {
 }
 .container{
     background-color: #f5d033;
-    height: 100%;
     padding: 0px;
 }
 .title-balk{
@@ -45,7 +44,7 @@ input{
     color: black;
     width: 75%;
     text-align: left;
-    padding-left: 5%;
+    padding: 5%;
 }
 .bier h3{
     font-size: medium;
@@ -79,4 +78,14 @@ input{
 
 .invisible{
     display: none;
+}
+
+#input{
+    margin-top: 100px;
+    margin-bottom: 100px;
+    padding: 20px 20px 20px 20px;
+    border-color: black;
+    border-radius: 4px;
+    background-color: white;
+    color: black;
 }
