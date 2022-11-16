@@ -44,10 +44,10 @@ btnZoeken.addEventListener('click', function (e){
     overzichtBrouwerij.classList.add("visible")
     overzichtBrouwerij.classList.remove("invisible")
 
-    const inputs = document.querySelector("#naam, #volume, #alcoholPercentage, #brouwerijIn, #soortIn, #land")
+    const inputs = document.querySelector("#naam, #volume, #alcoholPercentage, #brouwerijIn, #soortIn, #land");
 
     inputs.forEach(input =>{
-        input.value = '';
+        input.value = "";
     });
 })
 
