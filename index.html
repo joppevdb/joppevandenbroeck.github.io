@@ -19,57 +19,58 @@
     </div>
 
     <div x-data="{
-    postnaam: null,
-    postvolume: null,
-    postalcohol_perc: null,
-    postbrouwerij: null,
-    postsoort: null,
-    postland: null,
-    responsedata: null,
-    bieren: null,
-    soorten: null,
-    bierenVanBrouwerij: null,
-    inputBrouwerij: null,
-    async callmethod1(){
-        this.bieren = await (await fetch('https://bier-service-joppevdb.cloud.okteto.net/bier',
-        {
-            method: 'GET'
-        })).json();
-        console.log(this.bieren);
-    },
-       async callmethod2(){
-        this.bierenVanBrouwerij = await (await fetch('https://bier-service-joppevdb.cloud.okteto.net/brouwerij/'+ this.inputBrouwerij,
-        {
-            method: 'GET'
-        })).json();
-        console.log(this.bierenVanBrouwerij);
-    },
-    async callmethod3(){
-        this.soorten = await (await fetch('https://bier-service-joppevdb.cloud.okteto.net/soort',
-        {
-            method: 'GET'
-        })).json();
-        console.log(this.soorten);
-    },
-    async callmethod4(){
-        this.reponsedata = await (await fetch('https://bier-service-joppevdb.cloud.okteto.net/bier/',
-        {
-            method: 'POST',
-            body = JSON.stringify({
-                naam: this.postnaam,
-                volume: this.postvolume,
-                alcohol_perc: this.postalcohol_perc,
-                brouwerij: this.postbrouwerij,
-                soort: this.postsoort,
-                land: this.postland,
-            }),
-            headers: {
-                'Content-type': 'application/json; charset=UTF-8',
-            },
-        })).json();
+        test: null,
+        postnaam: null,
+        postvolume: null,
+        postalcohol_perc: null,
+        postbrouwerij: null,
+        postsoort: null,
+        postland: null,
+        responsedata: null,
+        bieren: null,
+        soorten: null,
+        bierenVanBrouwerij: null,
+        inputBrouwerij: null,
+        async callmethod1(){
+            this.bieren = await (await fetch('https://bier-service-joppevdb.cloud.okteto.net/bier',
+            {
+                method: 'GET'
+            })).json();
+            console.log(this.bieren);
+        },
+        async callmethod2(){
+            this.bierenVanBrouwerij = await (await fetch('https://bier-service-joppevdb.cloud.okteto.net/brouwerij/'+ this.inputBrouwerij,
+            {
+                method: 'GET'
+            })).json();
+            console.log(this.bierenVanBrouwerij);
+        },
+        async callmethod3(){
+            this.soorten = await (await fetch('https://bier-service-joppevdb.cloud.okteto.net/soort',
+            {
+                method: 'GET'
+            })).json();
+            console.log(this.soorten);
+        },
+        async callmethod4(){
+            this.reponsedata = await (await fetch('https://bier-service-joppevdb.cloud.okteto.net/bier/',
+            {
+                method: 'POST',
+                body :JSON.stringify({
+                    naam: this.postnaam,
+                    volume: this.postvolume,
+                    alcohol_perc: this.postalcohol_perc,
+                    brouwerij: this.postbrouwerij,
+                    soort: this.postsoort,
+                    land: this.postland
+                }),
+                headers: {
+                    'Content-type': 'application/json; charset=UTF-8',
+                }
+            })).json();
 
-        console.log(this.responsedata);
-    }
+            console.log(this.responsedata);
+        }
     }">
 
 
@@ -137,7 +138,7 @@
             <div class="col-8 mx-auto" id="input">
                 <div class="form-group">
                     <label for="naam">Naam:</label>
-                    <input id="naam" class="form-control" type="text" x-model="postnaam">
+                    <input id="naam" class="form-control" type="text" x-model="test">
                 </div>
                 <div class="form-group">
                     <label for="Volume">Volume:</label>
