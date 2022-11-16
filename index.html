@@ -78,12 +78,12 @@
         </div>
 
         <!--overzicht per brouwerij-->
-        <div id="overzichtBrouwerij" class="row invisible">
+        <div id="zoekbalk" class="row invisible">
             <div class="text-center ">
                 <input class="col-6" type="text" x-model="inputBrouwerij">
-                <button class="col-6" x-on:click="callmethod2">Zoek</button>
-                <div class="col-12 brouwerij">
-                    <p>Dit is het volledige aanbod van de brouwerij<strong x-text="inputBrouwerij"></strong></p>
+                <button id="zoeken" class="col-6" x-on:click="callmethod2">Zoek</button>
+                <div class="col-12 brouwerij" id="overzichtBrouwerij">
+                    <p>Dit is het volledige aanbod van de brouwerij <strong x-text="inputBrouwerij"></strong></p>
                     <template x-for="bier in bierenVanBrouwerij">
                         <li x-text="bier"></li>
                     </template>
