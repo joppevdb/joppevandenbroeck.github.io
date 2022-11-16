@@ -82,11 +82,13 @@
             <div class="text-center ">
                 <input class="col-6" type="text" x-model="inputBrouwerij">
                 <button class="col-6" x-on:click="callmethod2">Zoek</button>
-                <template class="col-12" x-for="bier in bierenVanBrouwerij">
-                    <li class="brouwerij" x-text="bier"></li>
-                </template>
+                <div class="col-12 brouwerij">
+                    <p>Dit is het volledige aanbod van de brouwerij<strong x-text="inputBrouwerij"></strong></p>
+                    <template x-for="bier in bierenVanBrouwerij">
+                        <li x-text="bier"></li>
+                    </template>
+                </div>
             </div>
-
         </div>
 
         <!--overzicht per soort-->
