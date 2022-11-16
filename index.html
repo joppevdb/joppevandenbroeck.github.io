@@ -67,6 +67,15 @@
 <!--                'Content-type': 'application/json; charset=UTF-8',-->
 <!--            },-->
 <!--        })).json();-->
+        body = JSON.stringify({
+            naam: this.postnaam,
+            volume: this.postvolume,
+            alcohol_perc: this.postalcohol_perc,
+            brouwerij: this.postbrouwerij,
+            soort: this.postsoort,
+            land: this.postland
+        })
+        console.log(body)
         console.log(this.postnaam)
         console.log(this.postvolume)
         console.log(this.postalcohol_perc)
