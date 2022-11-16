@@ -42,5 +42,6 @@ btnBrouwerij.addEventListener('click', function (e){
 
 btnZoeken.addEventListener('click', function (e){
     overzichtBrouwerij.classList.add("visible")
+    overzichtBrouwerij.classList.remove("invisible")
 })
 
