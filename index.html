@@ -56,12 +56,12 @@
         {
             method: 'POST',
             body: JSON.stringify({
-                naam: 'postnaam',
-<!--                volume: 'postvolume',-->
-<!--                alcohol_per: 'postalcohol_perc',-->
-<!--                brouwerij: 'postbrouwerij',-->
-<!--                soort: 'postsoort',-->
-<!--                land: 'postland'-->
+                naam: this.postnaam,
+                volume: this.postvolume,
+                alcohol_per: this.postalcohol_perc,
+                brouwerij: this.postbrouwerij,
+                soort: this.postsoort,
+                land: this.postland
             }),
             headers: {
                 'Content-type': 'application/json; charset=UTF-8',
