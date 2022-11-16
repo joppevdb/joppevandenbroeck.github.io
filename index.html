@@ -52,36 +52,23 @@
         console.log(this.soorten);
     },
     async callmethod4(){
-<!--        this.reponsedata = await (await fetch('https://bier-service-joppevdb.cloud.okteto.net/bier/',-->
-<!--        {-->
-<!--            method: 'POST',-->
-<!--            body: JSON.stringify({-->
-<!--                naam: this.postnaam,-->
-<!--                volume: this.postvolume,-->
-<!--                alcohol_per: this.postalcohol_perc,-->
-<!--                brouwerij: this.postbrouwerij,-->
-<!--                soort: this.postsoort,-->
-<!--                land: this.postland,-->
-<!--            }),-->
-<!--            headers: {-->
-<!--                'Content-type': 'application/json; charset=UTF-8',-->
-<!--            },-->
-<!--        })).json();-->
-        body = JSON.stringify({
+        this.reponsedata = await (await fetch('https://bier-service-joppevdb.cloud.okteto.net/bier/',
+        {
+            method: 'POST',
+            body = JSON.stringify({
             naam: this.postnaam,
             volume: this.postvolume,
             alcohol_perc: this.postalcohol_perc,
             brouwerij: this.postbrouwerij,
             soort: this.postsoort,
             land: this.postland
-        })
-        console.log(body)
-        console.log(this.postnaam)
-        console.log(this.postvolume)
-        console.log(this.postalcohol_perc)
-        console.log(this.postbrouwerij)
-        console.log(this.postsoort)
-        console.log(this.postland);
+            }),
+            headers: {
+                'Content-type': 'application/json; charset=UTF-8',
+            }
+        })).json();
+
+        console.log(this.responsedata);
     }
     }">
 
