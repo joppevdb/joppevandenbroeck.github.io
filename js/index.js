@@ -50,7 +50,8 @@ btnVerstuur.addEventListener('click', function (e){
     const inputs = document.querySelector("#naam, #volume, #alcoholPercentage, #brouwerijIn, #soortIn, #land");
 
     Array.from(inputs).forEach(input =>{
-        input.value = '';
+        input.value = "";
+        console.log(input)
     });
 })
 
