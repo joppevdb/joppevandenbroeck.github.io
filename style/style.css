@@ -39,11 +39,14 @@ input{
 }
 
 .brouwerij{
+    display: inline-block;
     border-color: black;
     background-color: white;
     color: black;
+    width: 75%;
+    text-align: left;
+    padding-left: 5%;
 }
-
 .bier h3{
     font-size: medium;
 }
