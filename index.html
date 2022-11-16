@@ -21,7 +21,7 @@
     <div x-data="{
     postnaam: null,
     postvolume: null,
-    postalcohol_per: null,
+    postalcohol_perc: null,
     postbrouwerij: null,
     postsoort: null,
     postland: null,
@@ -56,10 +56,9 @@
         {
             method: 'POST',
             body: JSON.stringify({
-                title: 'postnama',
                 naam: 'postnaam',
                 volume: 'postvolume',
-                alcohol_per: 'postalcohol_per',
+                alcohol_per: 'postalcohol_perc',
                 brouwerij: 'postbrouwerij',
                 soort: 'postsoort',
                 land: 'postland'
